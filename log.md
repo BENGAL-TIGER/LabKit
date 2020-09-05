@@ -1,0 +1,393 @@
+Waiting for build to start...
+Picked Git content provider.
+Cloning into '/tmp/repo2dockerea_gx3s2'...
+HEAD is now at ff71bb3 removed #!/bin/bash fromo pB. who knows?
+Building conda environment for python=3.7Using JuliaProjectTomlBuildPack builder
+Building conda environment for python=3.7Building conda environment for python=3.7Step 1/74 : FROM buildpack-deps:bionic
+ ---> 0978ac360d78
+Step 2/74 : ENV DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> 9f80127cfa46
+Step 3/74 : RUN apt-get -qq update &&     apt-get -qq install --yes --no-install-recommends locales > /dev/null &&     apt-get -qq purge &&     apt-get -qq clean &&     rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> 2893c4ac1fb4
+Step 4/74 : RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen &&     locale-gen
+ ---> Using cache
+ ---> 645c62e512f7
+Step 5/74 : ENV LC_ALL en_US.UTF-8
+ ---> Using cache
+ ---> 181552fe3c1c
+Step 6/74 : ENV LANG en_US.UTF-8
+ ---> Using cache
+ ---> e9a47b4d0df0
+Step 7/74 : ENV LANGUAGE en_US.UTF-8
+ ---> Using cache
+ ---> e4a6e892fe6a
+Step 8/74 : ENV SHELL /bin/bash
+ ---> Using cache
+ ---> 7e0af147d816
+Step 9/74 : ARG NB_USER
+ ---> Using cache
+ ---> 823ad309dca7
+Step 10/74 : ARG NB_UID
+ ---> Using cache
+ ---> f6ce624ede71
+Step 11/74 : ENV USER ${NB_USER}
+ ---> Using cache
+ ---> ab49218ba4d0
+Step 12/74 : ENV HOME /home/${NB_USER}
+ ---> Using cache
+ ---> c94e3fff395e
+Step 13/74 : RUN groupadd         --gid ${NB_UID}         ${NB_USER} &&     useradd         --comment "Default user"         --create-home        --gid ${NB_UID}         --no-log-init         --shell /bin/bash         --uid ${NB_UID}         ${NB_USER}
+ ---> Using cache
+ ---> 7b84750c0bc8
+Step 14/74 : RUN wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key |  apt-key add - &&     DISTRO="bionic" &&     echo "deb https://deb.nodesource.com/node_10.x $DISTRO main" >> /etc/apt/sources.list.d/nodesource.list &&     echo "deb-src https://deb.nodesource.com/node_10.x $DISTRO main" >> /etc/apt/sources.list.d/nodesource.list
+ ---> Using cache
+ ---> a0a11bcd13da
+Step 15/74 : RUN apt-get -qq update &&     apt-get -qq install --yes --no-install-recommends        less        nodejs        unzip> /dev/null &&     apt-get -qq purge &&     apt-get -qq clean &&     rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> 071a823143a3
+Step 16/74 : EXPOSE 8888
+ ---> Using cache
+ ---> fbd528e6a985
+Step 17/74 : ENV APP_BASE /srv
+ ---> Using cache
+ ---> fc7c1a92a7e9
+Step 18/74 : ENV NPM_DIR ${APP_BASE}/npm
+ ---> Using cache
+ ---> ad045b66d30d
+Step 19/74 : ENV NPM_CONFIG_GLOBALCONFIG ${NPM_DIR}/npmrc
+ ---> Using cache
+ ---> 98ac4f509843
+Step 20/74 : ENV CONDA_DIR ${APP_BASE}/conda
+ ---> Using cache
+ ---> b38ce7c36acd
+Step 21/74 : ENV NB_PYTHON_PREFIX ${CONDA_DIR}/envs/notebook
+ ---> Using cache
+ ---> 5b5b51f48595
+Step 22/74 : ENV KERNEL_PYTHON_PREFIX ${NB_PYTHON_PREFIX}
+ ---> Using cache
+ ---> f2173edd26d2
+Step 23/74 : ENV JULIA_PATH ${APP_BASE}/julia
+ ---> Using cache
+ ---> a836f62fd243
+Step 24/74 : ENV JULIA_DEPOT_PATH ${JULIA_PATH}/pkg
+ ---> Using cache
+ ---> 8479d1b65d38
+Step 25/74 : ENV JULIA_VERSION 1.5.1
+ ---> Using cache
+ ---> d67297629e66
+Step 26/74 : ENV JUPYTER ${NB_PYTHON_PREFIX}/bin/jupyter
+ ---> Using cache
+ ---> 7918c8f42fde
+Step 27/74 : ENV JUPYTER_DATA_DIR ${NB_PYTHON_PREFIX}/share/jupyter
+ ---> Using cache
+ ---> e752ec5139e9
+Step 28/74 : ENV PATH ${NB_PYTHON_PREFIX}/bin:${CONDA_DIR}/bin:${NPM_DIR}/bin:${JULIA_PATH}/bin:${PATH}
+ ---> Using cache
+ ---> 114a0b513fce
+Step 29/74 : COPY build_script_files/-2fusr-2flib-2fpython3-2e6-2fsite-2dpackages-2frepo2docker-2fbuildpacks-2fconda-2factivate-2dconda-2esh-2747be /etc/profile.d/activate-conda.sh
+ ---> Using cache
+ ---> 183cface5715
+Step 30/74 : COPY build_script_files/-2fusr-2flib-2fpython3-2e6-2fsite-2dpackages-2frepo2docker-2fbuildpacks-2fconda-2fenvironment-2epy-2d3-2e7-2efrozen-2eyml-b3d5bc /tmp/environment.yml
+ ---> Using cache
+ ---> 408f9ecb9ae6
+Step 31/74 : COPY build_script_files/-2fusr-2flib-2fpython3-2e6-2fsite-2dpackages-2frepo2docker-2fbuildpacks-2fconda-2finstall-2dminiforge-2ebash-76fdcd /tmp/install-miniforge.bash
+ ---> Using cache
+ ---> a29301d63213
+Step 32/74 : RUN mkdir -p ${NPM_DIR} && chown -R ${NB_USER}:${NB_USER} ${NPM_DIR}
+ ---> Using cache
+ ---> 199ad38ef7d5
+Step 33/74 : USER ${NB_USER}
+ ---> Using cache
+ ---> 4e2fc5597648
+Step 34/74 : RUN npm config --global set prefix ${NPM_DIR}
+ ---> Using cache
+ ---> 43ae7de5b16b
+Step 35/74 : USER root
+ ---> Using cache
+ ---> 62f7fe63bb9c
+Step 36/74 : RUN bash /tmp/install-miniforge.bash && rm /tmp/install-miniforge.bash /tmp/environment.yml
+ ---> Using cache
+ ---> cfef50118bd7
+Step 37/74 : RUN mkdir -p ${JULIA_PATH} && curl -sSL "https://julialang-s3.julialang.org/bin/linux/x64/${JULIA_VERSION%[.-]*}/julia-${JULIA_VERSION}-linux-x86_64.tar.gz" | tar -xz -C ${JULIA_PATH} --strip-components 1
+ ---> Using cache
+ ---> b4876ba04bf8
+Step 38/74 : RUN mkdir -p ${JULIA_DEPOT_PATH} && chown ${NB_USER}:${NB_USER} ${JULIA_DEPOT_PATH}
+ ---> Using cache
+ ---> 3b80793df851
+Step 39/74 : ARG REPO_DIR=${HOME}
+ ---> Using cache
+ ---> 46956a987b56
+Step 40/74 : ENV REPO_DIR ${REPO_DIR}
+ ---> Using cache
+ ---> f167156ddb2b
+Step 41/74 : WORKDIR ${REPO_DIR}
+ ---> Using cache
+ ---> 79bb9abb5a56
+Step 42/74 : ENV PATH ${HOME}/.local/bin:${REPO_DIR}/.local/bin:${PATH}
+ ---> Using cache
+ ---> 673c1cacc11e
+Step 43/74 : ENV CONDA_DEFAULT_ENV ${KERNEL_PYTHON_PREFIX}
+ ---> Using cache
+ ---> 7676c674e625
+Step 44/74 : ENV JULIA_PROJECT ${REPO_DIR}
+ ---> Using cache
+ ---> eedaafef16e0
+Step 45/74 : COPY src/environment.yml ${REPO_DIR}/environment.yml
+ ---> Using cache
+ ---> 3af94e3ba3c6
+Step 46/74 : USER root
+ ---> Using cache
+ ---> 4a5ac766a644
+Step 47/74 : RUN chown -R ${NB_USER}:${NB_USER} ${REPO_DIR}
+ ---> Using cache
+ ---> f5c4c7ea8a0d
+Step 48/74 : USER ${NB_USER}
+ ---> Using cache
+ ---> 6cf8aa10c5b3
+Step 49/74 : RUN conda env update -p ${NB_PYTHON_PREFIX} -f "environment.yml" && conda clean --all -f -y && conda list -p ${NB_PYTHON_PREFIX}
+ ---> Using cache
+ ---> eedf2c88c3b8
+Step 50/74 : RUN conda install -p ${NB_PYTHON_PREFIX} r-base r-irkernel=1.1 r-devtools && conda clean --all -f -y && conda list -p ${NB_PYTHON_PREFIX}
+ ---> Using cache
+ ---> 113ce37a4fab
+Step 51/74 : USER root
+ ---> Using cache
+ ---> 6ec736b2c6d4
+Step 52/74 : RUN curl --silent --location --fail https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5001-amd64.deb > /tmp/rstudio.deb && echo 'd33881b9ab786c09556c410e7dc477de /tmp/rstudio.deb' | md5sum -c - && apt-get update && apt install -y /tmp/rstudio.deb && rm /tmp/rstudio.deb && apt-get -qq purge && apt-get -qq clean && rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> 1716e2327a53
+Step 53/74 : RUN curl --silent --location --fail https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.12.933-amd64.deb > /tmp/shiny.deb && echo '9aeef6613e7f58f21c97a4600921340e /tmp/shiny.deb' | md5sum -c - && dpkg -i /tmp/shiny.deb && rm /tmp/shiny.deb
+ ---> Using cache
+ ---> b59f4c41b8ef
+Step 54/74 : USER ${NB_USER}
+ ---> Using cache
+ ---> a6a5a0872dc1
+Step 55/74 : RUN pip install --no-cache-dir jupyter-server-proxy==1.4.0 && pip install --no-cache-dir https://github.com/jupyterhub/jupyter-rsession-proxy/archive/d5efed5455870556fc414f30871d0feca675a4b4.zip && pip install --no-cache-dir https://github.com/ryanlovett/jupyter-shiny-proxy/archive/47557dc47e2aeeab490eb5f3eeae414cdde4a6a9.zip && jupyter serverextension enable jupyter_server_proxy --sys-prefix && jupyter nbextension install --py jupyter_server_proxy --sys-prefix && jupyter nbextension enable --py jupyter_server_proxy --sys-prefix
+ ---> Using cache
+ ---> 783175c2171c
+Step 56/74 : USER root
+ ---> Using cache
+ ---> 1ed6f0a0def3
+Step 57/74 : RUN install -o ${NB_USER} -g ${NB_USER} -d /var/log/shiny-server && install -o ${NB_USER} -g ${NB_USER} -d /var/lib/shiny-server && install -o ${NB_USER} -g ${NB_USER} /dev/null /var/log/shiny-server.log && install -o ${NB_USER} -g ${NB_USER} /dev/null /var/run/shiny-server.pid
+ ---> Using cache
+ ---> 9fccf0ce87ae
+Step 58/74 : RUN echo auth-none=1 >> /etc/rstudio/rserver.conf && echo auth-minimum-user-id=0 >> /etc/rstudio/rserver.conf && echo "rsession-which-r=${NB_PYTHON_PREFIX}/bin/R" >> /etc/rstudio/rserver.conf && echo www-frame-origin=same >> /etc/rstudio/rserver.conf
+ ---> Using cache
+ ---> 5aae35794ec0
+Step 59/74 : USER ${NB_USER}
+ ---> Using cache
+ ---> db1a8f276972
+Step 60/74 : RUN R --quiet -e "IRkernel::installspec(prefix='${NB_PYTHON_PREFIX}')"
+ ---> Using cache
+ ---> 1d984c56001b
+Step 61/74 : USER root
+ ---> Using cache
+ ---> 1248fac5714b
+Step 62/74 : COPY src/ ${REPO_DIR}
+ ---> ebb27cb090c8
+Step 63/74 : RUN chown -R ${NB_USER}:${NB_USER} ${REPO_DIR}
+ ---> Running in 59889dc61c5d
+Removing intermediate container 59889dc61c5d
+ ---> 96fca00e7731
+Step 64/74 : USER ${NB_USER}
+ ---> Running in 9bf5f7c1d052
+Removing intermediate container 9bf5f7c1d052
+ ---> aa930fea60db
+Step 65/74 : RUN JULIA_PROJECT="" julia -e "using Pkg; Pkg.add(\"IJulia\"); using IJulia; installkernel(\"Julia\", \"--project=${REPO_DIR}\");" && julia --project=${REPO_DIR} -e 'using Pkg; Pkg.instantiate(); Pkg.resolve(); pkg"precompile"'
+ ---> Running in 9336dc386d5a
+ Installing known registries into `/srv/julia/pkg`
+######################################################################## 100.0%
+      Added registry `General` to `/srv/julia/pkg/registries/General`
+  Resolving package versions...
+  Installed Conda ─────────── v1.4.1
+  Installed VersionParsing ── v1.2.0
+  Installed MbedTLS_jll ───── v2.16.8+0
+  Installed ZMQ ───────────── v1.2.1
+  Installed MbedTLS ───────── v1.0.2
+  Installed JSON ──────────── v0.21.0
+  Installed Parsers ───────── v1.0.10
+  Installed IJulia ────────── v1.21.3
+  Installed SoftGlobalScope ─ v1.1.0
+  Installed ZeroMQ_jll ────── v4.3.2+4
+######################################################################## 100.0%
+######################################################################## 100.0%
+Updating `/srv/julia/pkg/environments/v1.5/Project.toml`
+  [7073ff75] + IJulia v1.21.3
+Updating `/srv/julia/pkg/environments/v1.5/Manifest.toml`
+  [8f4d0f93] + Conda v1.4.1
+  [7073ff75] + IJulia v1.21.3
+  [682c06a0] + JSON v0.21.0
+  [739be429] + MbedTLS v1.0.2
+  [c8ffd9c3] + MbedTLS_jll v2.16.8+0
+  [69de0a69] + Parsers v1.0.10
+  [b85f4697] + SoftGlobalScope v1.1.0
+  [81def892] + VersionParsing v1.2.0
+  [c2297ded] + ZMQ v1.2.1
+  [8f1865be] + ZeroMQ_jll v4.3.2+4
+  [2a0f44e3] + Base64
+  [ade2ca70] + Dates
+  [8ba89e20] + Distributed
+  [7b1f6079] + FileWatching
+  [b77e0a4c] + InteractiveUtils
+  [76f85450] + LibGit2
+  [8f399da3] + Libdl
+  [56ddb016] + Logging
+  [d6f4376e] + Markdown
+  [a63ad114] + Mmap
+  [44cfe95a] + Pkg
+  [de0858da] + Printf
+  [3fa0cd96] + REPL
+  [9a3f8284] + Random
+  [ea8e919c] + SHA
+  [9e88b42a] + Serialization
+  [6462fe0b] + Sockets
+  [8dfed614] + Test
+  [cf7118a7] + UUIDs
+  [4ec0a83e] + Unicode
+   Building Conda ─→ `/srv/julia/pkg/packages/Conda/3rPhK/deps/build.log`
+   Building IJulia → `/srv/julia/pkg/packages/IJulia/tOM8L/deps/build.log`
+[ Info: Installing Julia kernelspec in /srv/conda/envs/notebook/share/jupyter/kernels/julia-1.5
+   Updating registry at `/srv/julia/pkg/registries/General`
+  Installed CompilerSupportLibraries_jll ─ v0.3.3+0
+  Installed WinReg ─────────────────────── v0.3.1
+  Installed StatsFuns ──────────────────── v0.9.5
+  Installed Unitful ────────────────────── v1.4.0
+  Installed StatsModels ────────────────── v0.6.14
+  Installed PyCall ─────────────────────── v1.91.4
+  Installed RCall ──────────────────────── v0.13.7
+  Installed Distributions ──────────────── v0.23.11
+  Installed ShiftedArrays ──────────────── v1.0.0
+  Installed ConstructionBase ───────────── v1.0.0
+  Installed Requires ───────────────────── v1.0.2
+  Installed Rmath_jll ──────────────────── v0.2.2+1
+  Installed DataAPI ────────────────────── v1.3.0
+  Installed MacroTools ─────────────────── v0.5.5
+  Installed IteratorInterfaceExtensions ── v1.0.0
+  Installed DataFrames ─────────────────── v0.21.7
+  Installed Rmath ──────────────────────── v0.6.1
+  Installed PDMats ─────────────────────── v0.10.0
+  Installed FillArrays ─────────────────── v0.9.5
+  Installed InvertedIndices ────────────── v1.0.0
+  Installed OpenSpecFun_jll ────────────── v0.5.3+3
+  Installed DataStructures ─────────────── v0.18.4
+  Installed Tables ─────────────────────── v1.0.5
+  Installed PooledArrays ───────────────── v0.5.3
+  Installed Missings ───────────────────── v0.4.4
+  Installed DataValueInterfaces ────────── v1.0.0
+  Installed Reexport ───────────────────── v0.2.0
+  Installed SortingAlgorithms ──────────── v0.3.1
+  Installed StatsBase ──────────────────── v0.33.1
+  Installed Compat ─────────────────────── v3.15.0
+  Installed TableTraits ────────────────── v1.0.0
+  Installed SpecialFunctions ───────────── v0.10.3
+  Installed StructTypes ────────────────── v1.1.0
+  Installed QuadGK ─────────────────────── v2.4.1
+  Installed OrderedCollections ─────────── v1.3.0
+  Installed CategoricalArrays ──────────── v0.8.2
+######################################################################## 100.0%
+######################################################################## 100.0%
+######################################################################## 100.0%
+Updating `~/Project.toml`
+  [438e738f] + PyCall v1.91.4
+  [6f49c342] + RCall v0.13.7
+  [1986cc42] + Unitful v1.4.0
+Updating `~/Manifest.toml`
+  [324d7699] + CategoricalArrays v0.8.2
+  [34da2185] + Compat v3.15.0
+  [e66e0078] + CompilerSupportLibraries_jll v0.3.3+0
+  [8f4d0f93] + Conda v1.4.1
+  [187b0558] + ConstructionBase v1.0.0
+  [9a962f9c] + DataAPI v1.3.0
+  [a93c6f00] + DataFrames v0.21.7
+  [864edb3b] + DataStructures v0.18.4
+  [e2d170a0] + DataValueInterfaces v1.0.0
+  [31c24e10] + Distributions v0.23.11
+  [1a297f60] + FillArrays v0.9.5
+  [41ab1584] + InvertedIndices v1.0.0
+  [82899510] + IteratorInterfaceExtensions v1.0.0
+  [682c06a0] + JSON v0.21.0
+  [1914dd2f] + MacroTools v0.5.5
+  [e1d29d7a] + Missings v0.4.4
+  [efe28fd5] + OpenSpecFun_jll v0.5.3+3
+  [bac558e1] + OrderedCollections v1.3.0
+  [90014a1f] + PDMats v0.10.0
+  [69de0a69] + Parsers v1.0.10
+  [2dfb63ee] + PooledArrays v0.5.3
+  [438e738f] + PyCall v1.91.4
+  [1fd47b50] + QuadGK v2.4.1
+  [6f49c342] + RCall v0.13.7
+  [189a3867] + Reexport v0.2.0
+  [ae029012] + Requires v1.0.2
+  [79098fc4] + Rmath v0.6.1
+  [f50d1b31] + Rmath_jll v0.2.2+1
+  [1277b4bf] + ShiftedArrays v1.0.0
+  [a2af1166] + SortingAlgorithms v0.3.1
+  [276daf66] + SpecialFunctions v0.10.3
+  [2913bbd2] + StatsBase v0.33.1
+  [4c63d2b9] + StatsFuns v0.9.5
+  [3eaba693] + StatsModels v0.6.14
+  [856f2bd8] + StructTypes v1.1.0
+  [3783bdb8] + TableTraits v1.0.0
+  [bd369af6] + Tables v1.0.5
+  [1986cc42] + Unitful v1.4.0
+  [81def892] + VersionParsing v1.2.0
+  [1b915085] + WinReg v0.3.1
+  [2a0f44e3] + Base64
+  [ade2ca70] + Dates
+  [8bb1440f] + DelimitedFiles
+  [8ba89e20] + Distributed
+  [9fa8497b] + Future
+  [b77e0a4c] + InteractiveUtils
+  [76f85450] + LibGit2
+  [8f399da3] + Libdl
+  [37e2e46d] + LinearAlgebra
+  [56ddb016] + Logging
+  [d6f4376e] + Markdown
+  [a63ad114] + Mmap
+  [44cfe95a] + Pkg
+  [de0858da] + Printf
+  [3fa0cd96] + REPL
+  [9a3f8284] + Random
+  [ea8e919c] + SHA
+  [9e88b42a] + Serialization
+  [1a1011a3] + SharedArrays
+  [6462fe0b] + Sockets
+  [2f01184e] + SparseArrays
+  [10745b16] + Statistics
+  [4607b0f0] + SuiteSparse
+  [8dfed614] + Test
+  [cf7118a7] + UUIDs
+  [4ec0a83e] + Unicode
+   Building RCall ─→ `/srv/julia/pkg/packages/RCall/Qzssx/deps/build.log`
+   Building PyCall → `/srv/julia/pkg/packages/PyCall/zqDXB/deps/build.log`
+No Changes to `~/Project.toml`
+No Changes to `~/Manifest.toml`
+Precompiling project...
+Removing intermediate container 9336dc386d5a
+ ---> 13060d557fc7
+Step 66/74 : LABEL repo2docker.ref="ff71bb38b2360e51f3cdf055b0b12846937999b3"
+ ---> Running in e8a45d2435c5
+Removing intermediate container e8a45d2435c5
+ ---> 63848f5484dd
+Step 67/74 : LABEL repo2docker.repo="https://github.com/BENGAL-TIGER/LabKit"
+ ---> Running in 9d9c20ab687b
+Removing intermediate container 9d9c20ab687b
+ ---> 7a0b0b6e44f5
+Step 68/74 : LABEL repo2docker.version="0.11.0+134.g64371cb"
+ ---> Running in 318f2c9ba9ac
+Removing intermediate container 318f2c9ba9ac
+ ---> 3886e7851fd0
+Step 69/74 : USER ${NB_USER}
+ ---> Running in 6b1f1a1baf75
+Removing intermediate container 6b1f1a1baf75
+ ---> 4c8a606ed6e4
+Step 70/74 : RUN chmod +x postBuild
+ ---> Running in 93ec2882dbfc
+Removing intermediate container 93ec2882dbfc
+ ---> 5e9cbe63ebe1
+Step 71/74 : RUN ./postBuild
+ ---> Running in 9d2a77598a10
+Building jupyterlab assets (build:prod:minimize)
+/
