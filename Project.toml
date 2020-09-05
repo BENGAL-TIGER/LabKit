@@ -1,2 +1,4 @@
 [deps]
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+RCall = "6f49c342-dc21-5d91-9882-a32aef131414"
 Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
