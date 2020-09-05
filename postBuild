@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 
-#R --quiet -f r/install.R
-R CMD INSTALL r/
+R --quiet -f r/install.R
+
+#R CMD INSTALL r/
