@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+
+
+pip3 install jupyterhub jupyter-rsession-proxy && jupyter labextension install jupyterlab-server-proxy
+
+
+
+
