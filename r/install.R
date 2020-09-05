@@ -1,0 +1,32 @@
+install.packages("tidyverse")
+install.packages("bookdown")
+install.packages("bookdownplus")
+install.packages("rticles")
+install.packages("JuliaCall")
+install.packages("ggrepel")
+install.packages("ggthemes")
+
+tinytex::tlmgr_install(
+            "changepage",
+            "fancyhdr",
+            "fontenc",
+            "geometry",
+            "hyperref",
+            "natbib",
+            "bibentry",
+            "optparams",
+            "paralist",
+            "placeins",
+            "ragged2e",
+            "setspace",
+            "textcase",
+            "textcomp",
+            "titlesec",
+            "titletoc",
+            "xcolor",
+            "xifthen",
+            "beramono",
+            "helvet",
+            "microtype",
+            "mathpazo",
+            "soul")
