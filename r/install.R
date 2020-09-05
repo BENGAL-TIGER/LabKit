@@ -7,6 +7,7 @@ install.packages("rticles")
 install.packages("JuliaCall")
 install.packages("ggrepel")
 install.packages("ggthemes")
+install.packages("tufte")
 
 tinytex::install_tinytex(
   extra_packages = c( 
