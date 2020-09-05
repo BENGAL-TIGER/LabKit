@@ -1,6 +1,7 @@
 channels:
   - conda-forge
 dependencies:
+  - nbgitpuller
   - r-base
   - r-essentials
   # - r-tidyverse
