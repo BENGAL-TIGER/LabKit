@@ -2,8 +2,8 @@
 
 
 
-# fails here when julia is added
-#jupyter labextension install @jupyterlab/server-proxy
+# fails here when julia was added
+jupyter labextension install @jupyterlab/server-proxy
 
 
 
