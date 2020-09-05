@@ -1,3 +1,4 @@
 #!/bin/bash
 
-R --quiet -f r/install.R
+#R --quiet -f r/install.R
+R CMD INSTALL r/
