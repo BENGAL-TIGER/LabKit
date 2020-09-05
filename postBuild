@@ -1,0 +1,3 @@
+#!/bin/bash
+
+R --quiet -f r/install.R
