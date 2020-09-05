@@ -3,8 +3,8 @@
 
 
 # fails here when julia was added
-jupyter labextension install @jupyterlab/server-proxy
-
-
+# jupyter labextension install @jupyterlab/server-proxy
+jupyter labextension install @jupyterlab/mathjax3-extension
+jupyter labextension install jupyterlab-drawio
 
 
