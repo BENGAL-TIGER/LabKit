@@ -85,6 +85,7 @@ tinytex::install_tinytex(
     "latexmk",
     "letltxmacro",
     "listings",
+    "lipsum",
     "lm",
     "lm-math",
     "ltxcmds",
