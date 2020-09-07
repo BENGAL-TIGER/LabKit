@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# CoolProp.jl
+# PyCallCoolProp.jl
 julia -e 'import Pkg; Pkg.add(path = "./PyCallCoolProp.jl")'
 
 # install more r packages. these will be compiled on the spot
