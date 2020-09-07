@@ -2,7 +2,7 @@ channels:
   - conda-forge
 dependencies:
   - jupyter_contrib_nbextensions
-  - coolprop
+  - CoolProp
   - rise
   - nbgitpuller
   - r-base
