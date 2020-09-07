@@ -1,13 +1,15 @@
 channels:
   - conda-forge
+  - coolprop
 dependencies:
   - jupyter_contrib_nbextensions
   - rise
   - nbgitpuller
   - r-base
   - r-essentials
-  - pip
-  - pip:
-    - coolprop
+  - coolprop
+  
+  # - pip:
+  #   - coolprop
 
   # - r-tidyverse
