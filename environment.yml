@@ -2,10 +2,10 @@ channels:
   - conda-forge
 dependencies:
   - jupyter_contrib_nbextensions
+  - conda-forge::coolprop
   - rise
   - nbgitpuller
   - r-base
   - r-essentials
-  - conda-forge::coolprop
 
  
