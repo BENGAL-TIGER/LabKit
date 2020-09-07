@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# CoolProp.jl
+julila -e 'import Pkg && Pkg.add(url = "https://github.com/CoolProp/CoolProp.jl.git")'
+
 # install more r packages. these will be compiled on the spot
 R --quiet -f r/install.R
 
