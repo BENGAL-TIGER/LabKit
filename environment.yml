@@ -5,4 +5,4 @@ dependencies:
   - jupyter_contrib_nbextensions
   - nbgitpuller
   - r-base
-  - r-essentials
+  # - r-essentials
