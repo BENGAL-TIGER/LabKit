@@ -5,4 +5,7 @@ dependencies:
   - jupyter_contrib_nbextensions
   - nbgitpuller
   - r-base
-  # - r-essentials
+  - codebraid
+  - pip
+  - pip:
+    - jupyter-book
