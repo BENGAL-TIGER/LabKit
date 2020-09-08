@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # can't install coolprop via envirnoment.yml for some reason
-conda install coolprop
+# conda install coolprop
 
 # PyCallCoolProp.jl
 julia -e 'import Pkg; Pkg.add(path = "./PyCallCoolProp.jl")'
