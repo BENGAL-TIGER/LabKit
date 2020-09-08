@@ -3,8 +3,10 @@
 # can't install coolprop via envirnoment.yml for some reason
 # conda install coolprop
 
-# PyCallCoolProp.jl
-julia -e 'import Pkg; Pkg.add(path = "./PyCallCoolProp.jl")'
+# MarcuciusUtility.jl (exports from coolprop.py)
+julia -e 'import Pkg; 
+          Pkg.add(url = "Pkg.add(url="https://github.com/mdAshford/MarcuciusUtility.jl.git");
+          Pkg.precompile()'
 
 # install more r packages. these will be compiled on the spot
 R --quiet -f r/install.R
