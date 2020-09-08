@@ -4,9 +4,9 @@
 # conda install coolprop
 
 # MarcuciusUtility.jl (exports from coolprop.py)
-julia -e 'import Pkg; 
-          Pkg.add(url="https://github.com/mdAshford/MarcuciusUtility.jl.git");
-          Pkg.precompile()'
+# julia -e 'import Pkg; 
+#           Pkg.add(url="https://github.com/mdAshford/MarcuciusUtility.jl.git");
+#           Pkg.precompile()'
 
 # install more r packages. these will be compiled on the spot
 R --quiet -f r/install.R
