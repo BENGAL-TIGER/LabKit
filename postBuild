@@ -1,5 +1,12 @@
 #!/bin/sh
 
+# can't install coolprop via envirnoment.yml for some reason
+# conda install coolprop
+
+# MarcuciusUtility.jl (exports from coolprop.py)
+# julia -e 'import Pkg; 
+#           Pkg.add(url="https://github.com/BENGAL-TIGER/CoolProp-6.3.0.jl.git");
+#           Pkg.precompile()'
 
 # install more r packages. these will be compiled on the spot
 R --quiet -f r/install.R
@@ -7,4 +14,4 @@ R --quiet -f r/install.R
 # enable jupyter extensions
 jupyter nbextension enable livemdpreview/livemdpreview
 
-jupyter labextension install @jupyterlab/server-proxy
+# jupyter labextension install @jupyterlab/server-proxy
