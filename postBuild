@@ -12,10 +12,11 @@
 R --quiet -f r/install.R
 
 # enable jupyter extensions
-jupyter nbextension enable livemdpreview/livemdpreview
+jupyter nbextension enable livemdpreview/livemdpreview              
+jupyter nbextension enable equation-numbering/main
 
-jupyter labextension install                \
-    jupyterlab-drawio                      # \
+jupyter labextension install                  \
+    jupyterlab-drawio                      #  \
     # @deathbeds/jupyterlab-drawio            \
     # @deathbeds/jupyterlab-drawio-notebook   \
     # @deathbeds/jupyterlab-drawio-webpack    \
