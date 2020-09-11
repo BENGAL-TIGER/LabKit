@@ -14,5 +14,5 @@ R --quiet -f r/install.R
 # enable jupyter extensions
 jupyter nbextension enable livemdpreview/livemdpreview
 
-# jupyter labextension install @jupyterlab/server-proxy
+jupyter labextension install @jupyterlab/server-proxy
 # NODE_OPTIONS=--max_old_space_size=4096 jupyter labextension install @jupyterlab/server-proxy
