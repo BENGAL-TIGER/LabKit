@@ -15,6 +15,7 @@ R --quiet -f r/install.R
 jupyter nbextension enable livemdpreview/livemdpreview
 
 jupyter labextension install                \
+    jupyterlab-drawio                       \
     @deathbeds/jupyterlab-drawio            \
     @deathbeds/jupyterlab-drawio-notebook   \
     @deathbeds/jupyterlab-drawio-webpack    \
