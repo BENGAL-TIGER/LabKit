@@ -10,5 +10,7 @@ jupyter nbextension enable equation-numbering/main
 jupyter labextension install              \
   @deathbeds/jupyterlab-drawio            \
   @deathbeds/jupyterlab-drawio-notebook   \
-  @deathbeds/jupyterlab-drawio-webpack    \
+  @deathbeds/jupyterlab-drawio-webpack  
+
+jupyter labextension install              \
   @jupyterlab/server-proxy                
