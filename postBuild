@@ -7,10 +7,10 @@
 jupyter nbextension enable livemdpreview/livemdpreview              
 jupyter nbextension enable equation-numbering/main
 
-jupyter labextension install              \
+# jupyter labextension install              \
   # @deathbeds/jupyterlab-drawio            \
   # @deathbeds/jupyterlab-drawio-notebook   \
   # @deathbeds/jupyterlab-drawio-webpack    \
-  @jupyterlab/server-proxy  
+  # @jupyterlab/server-proxy  
 
-# jupyter labextension install @jupyterlab/server-proxy                
+jupyter labextension install @jupyterlab/server-proxy                
