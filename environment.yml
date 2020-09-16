@@ -1,12 +1,14 @@
 channels:
   - conda-forge
 dependencies:
-  - coolprop
+  # - coolprop
   - jupyter_contrib_nbextensions
   - nbgitpuller
   - r-base
   - codebraid
+  - octave_kernel
+  - octave
   
   # - pip
   # - pip:
-  #   - jupyter-book
+  #   - jupyter-booktr
