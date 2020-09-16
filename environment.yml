@@ -7,7 +7,6 @@ dependencies:
   - r-base
   - codebraid
   - octave_kernel
-  - octave
   
   # - pip
   # - pip:
