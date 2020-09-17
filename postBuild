@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# install more r packages. these will be compiled on the spot
+# R --quiet -f r/install.R
+
+# enable jupyter extensions
+# jupyter nbextension enable livemdpreview/livemdpreview              
+# jupyter nbextension enable equation-numbering/main
+
+# jupyter labextension install              \
+#   @deathbeds/jupyterlab-drawio            \
+#   @deathbeds/jupyterlab-drawio-notebook   \
+#   @deathbeds/jupyterlab-drawio-webpack    \
+#   @jupyterlab/server-proxy  
+
+# jupyter labextension install @jupyterlab/server-proxy                
+
+
+# pip install jupyter_contrib_nbextensions
+pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
+jupyter contrib nbextension install --user 
+jupyter nbextension enable livemdpreview/livemdpreview              
+jupyter nbextension enable equation-numbering/main
+
+pip install jupyter-server-proxy
+jupyter labextension install              \
+  @deathbeds/jupyterlab-drawio            \
+  @deathbeds/jupyterlab-drawio-notebook   \
+  @deathbeds/jupyterlab-drawio-webpack    \
+  @jupyterlab/server-proxy  
+
