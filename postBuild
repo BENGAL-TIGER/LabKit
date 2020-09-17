@@ -23,9 +23,10 @@ jupyter nbextension enable livemdpreview/livemdpreview
 jupyter nbextension enable equation-numbering/main
 
 pip install jupyter-server-proxy
-jupyter labextension install              \
-  @deathbeds/jupyterlab-drawio            \
-  @deathbeds/jupyterlab-drawio-notebook   \
-  @deathbeds/jupyterlab-drawio-webpack    \
-  @jupyterlab/server-proxy  
+# jupyter labextension install              \
+#   @deathbeds/jupyterlab-drawio            \
+#   @deathbeds/jupyterlab-drawio-notebook   \
+#   @deathbeds/jupyterlab-drawio-webpack    \
+#   @jupyterlab/server-proxy  --minimize=False
 
+jupyter labextension install @jupyterlab/server-proxy  --minimize=False
