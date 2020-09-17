@@ -17,10 +17,10 @@
 
 
 # pip install jupyter_contrib_nbextensions
-pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
-jupyter contrib nbextension install --user 
-jupyter nbextension enable livemdpreview/livemdpreview              
-jupyter nbextension enable equation-numbering/main
+# pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
+# jupyter contrib nbextension install --user 
+# jupyter nbextension enable livemdpreview/livemdpreview              
+# jupyter nbextension enable equation-numbering/main
 
 pip install jupyter-server-proxy
 # jupyter labextension install              \
