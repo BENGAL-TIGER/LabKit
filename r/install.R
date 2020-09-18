@@ -2,7 +2,7 @@ options(repos = "http://cran.us.r-project.org")
 
 install.packages("tidyverse")
 install.packages("bookdown")
-# install.packages("bookdownplus")
+install.packages("bookdownplus")
 install.packages("rticles")
 install.packages("JuliaCall")
 install.packages("ggrepel")
