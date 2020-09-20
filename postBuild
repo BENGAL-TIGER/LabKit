@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # install more r packages. these will be compiled on the spot
-# R --quiet -f r/install.R
+R --quiet -f r/install.R
 
 # enable jupyter extensions
 jupyter nbextension enable livemdpreview/livemdpreview              
