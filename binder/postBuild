@@ -19,3 +19,4 @@ jupyter labextension install              \
 # to do 
 # ⋅ mathjax extensions
 
+cd ~
