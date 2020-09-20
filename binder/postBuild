@@ -1,89 +1,5 @@
 #!/bin/sh
 
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
-echo ${PWD}
 
 
 # install more r packages. these will be compiled on the spot
@@ -106,4 +22,7 @@ jupyter labextension install              \
 # to do 
 # ⋅ mathjax extensions
 
+HOME=/home/jovyan/LabKit.Demos/work
+export HOME
 cd ~
+
