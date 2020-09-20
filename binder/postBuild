@@ -22,7 +22,8 @@ jupyter labextension install              \
 # to do 
 # ⋅ mathjax extensions
 
-HOME=/home/jovyan/LabKit.Demos/work
-export HOME
+# moved to start file
+# HOME=/home/jovyan/LabKit.Demos/work
+# export HOME
 # cd ~
 
