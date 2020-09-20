@@ -3,6 +3,6 @@ channels:
 dependencies:
   - jupyter_contrib_nbextensions
   - nbgitpuller
-  - r-base
+  - r-base>=4
   - codebraid
   - octave_kernel
