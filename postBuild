@@ -5,6 +5,11 @@
 # install more r packages. these will be compiled on the spot
 R --quiet -f r/install.R
 
+# zsh
+python3 -m pip install zsh_jupyter_kernel
+python3 -m zsh_jupyter_kernel.install --sys-prefix
+
+
 # enable jupyter extensions
 jupyter nbextension enable livemdpreview/livemdpreview              
 jupyter nbextension enable equation-numbering/main
@@ -18,9 +23,6 @@ jupyter labextension install              \
 
 # --minimize=False seems to be the key              
 
-
-# to do 
-# ⋅ mathjax extensions
 
 # moved to start file
 # HOME=/home/jovyan/LabKit.Demos/work
