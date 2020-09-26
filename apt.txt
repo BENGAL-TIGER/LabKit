@@ -2,3 +2,4 @@ octave
 octave-image
 gnuplot
 ghostscript
+zsh
