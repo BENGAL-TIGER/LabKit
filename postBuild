@@ -18,7 +18,7 @@ jupyter labextension install              \
   @deathbeds/jupyterlab-drawio            \
   @deathbeds/jupyterlab-drawio-notebook   \
   @deathbeds/jupyterlab-drawio-webpack    \
-  @jupyterlab/mathjax3-extension          \
+  @marcucius/mathjax3plus          \
   @jupyterlab/server-proxy  --minimize=False
 
 # --minimize=False seems to be the key              
