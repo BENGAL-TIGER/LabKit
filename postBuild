@@ -24,8 +24,5 @@ jupyter labextension install              \
 # --minimize=False seems to be the key              
 
 
-# moved to start file
-# HOME=/home/jovyan/LabKit.Demos/work
-# export HOME
-# cd ~
+jupyter labextension disable @jupyterlab/mathjax2-extension
 
