@@ -10,10 +10,12 @@ python3 -m pip install zsh_jupyter_kernel
 python3 -m zsh_jupyter_kernel.install --sys-prefix
 
 
-# enable jupyter extensions
+# jupyter notebook extensions
 jupyter nbextension enable livemdpreview/livemdpreview              
 jupyter nbextension enable equation-numbering/main
 
+
+# jupyter lab extensions
 jupyter labextension install              \
   @deathbeds/jupyterlab-drawio            \
   @deathbeds/jupyterlab-drawio-notebook   \
