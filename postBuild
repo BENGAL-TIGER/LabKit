@@ -10,22 +10,32 @@ python3 -m pip install zsh_jupyter_kernel
 python3 -m zsh_jupyter_kernel.install --sys-prefix
 
 
+# IJavascript
+npm config set prefix $HOME
+npm install -g ijavascript
+ijsinstall
+
+
 # jupyter notebook extensions
 jupyter nbextension enable livemdpreview/livemdpreview              
 jupyter nbextension enable equation-numbering/main
 
 
 # jupyter lab extensions
+jupyter labextension disable              \
+  @jupyterlab/mathjax2-extension
+
 jupyter labextension install              \
   @deathbeds/jupyterlab-drawio            \
   @deathbeds/jupyterlab-drawio-notebook   \
   @deathbeds/jupyterlab-drawio-webpack    \
   @wallneradam/custom_css                 \
+  @jupyterlab/latex                       \
   @marcucius/mathjax3plus                 \
   @jupyterlab/server-proxy  --minimize=False
 
 # --minimize=False seems to be the key              
 
 
-# jupyter labextension disable @jupyterlab/mathjax2-extension
+
 
