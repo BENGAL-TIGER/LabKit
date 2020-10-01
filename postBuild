@@ -11,7 +11,7 @@ python3 -m zsh_jupyter_kernel.install --sys-prefix
 
 
 # IJavascript
-npm config set prefix $HOME
+npm config set prefix ~
 npm install -g ijavascript
 ijsinstall
 
@@ -31,7 +31,7 @@ jupyter labextension install              \
   @deathbeds/jupyterlab-drawio-webpack    \
   @wallneradam/custom_css                 \
   @jupyterlab/latex                       \
-  @marcucius/mathjax3plus                 \
+  @marcucius/mathjax2-extension           \
   @jupyterlab/server-proxy  --minimize=False
 
 # --minimize=False seems to be the key              
