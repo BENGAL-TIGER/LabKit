@@ -1,6 +1,7 @@
 channels:
   - conda-forge
 dependencies:
+  - nodejs
   - jupyter_contrib_nbextensions
   - nbgitpuller
   - r-base=4.*
