@@ -16,14 +16,19 @@ npm install -g ijavascript
 ijsinstall
 
 
+# ITypescript
+npm install -g itypescript
+its --install=local
+
+
 # jupyter notebook extensions
 jupyter nbextension enable livemdpreview/livemdpreview              
 jupyter nbextension enable equation-numbering/main
 
 
 # jupyter lab extensions
-jupyter labextension disable              \
-  @jupyterlab/mathjax2-extension
+# jupyter labextension disable              \
+#   @jupyterlab/mathjax2-extension
 
 jupyter labextension install              \
   @deathbeds/jupyterlab-drawio            \
@@ -31,11 +36,11 @@ jupyter labextension install              \
   @deathbeds/jupyterlab-drawio-webpack    \
   @wallneradam/custom_css                 \
   @jupyterlab/latex                       \
-  @marcucius/mathjax2-extension           \
   @jupyterlab/server-proxy  --minimize=False
 
 # --minimize=False seems to be the key              
 
+  # @marcucius/mathjax2-extension           \
 
 
 
