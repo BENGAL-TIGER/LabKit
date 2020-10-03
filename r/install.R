@@ -164,6 +164,8 @@ tinytex::install_tinytex(
     "xkeyval",
     "xltxtra",
     "xunicode",
-    "zapfding"))
+    "zapfding"
+  )
+)
 
 
