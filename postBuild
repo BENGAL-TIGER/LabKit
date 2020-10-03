@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 # install more r packages. these will be compiled on the spot
@@ -14,10 +14,19 @@ python3 -m zsh_jupyter_kernel.install --sys-prefix
 npm install -g ijavascript             && \
     ijsinstall --spec-path=full
 
+
+### wait here
+read -p "Press any key..."
+
+
 # ITypescript
-npm install -g  typescript             && \
-npm install -g itypescript             && \
-    its --install=local
+npm install -g  typescript                \
+npm install -g itypescript                \
+its --install=local
+
+
+### wait here
+read -p "Press any key..."
 
 
 # jupyter notebook extensions
