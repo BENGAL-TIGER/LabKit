@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#═════════════════════════════════════════════════════════════════════════════80════5════0
 
 # install more r packages. these will be compiled on the spot
 R --quiet -f r/install.R
@@ -19,9 +20,11 @@ npm install -g ijavascript             && \
 read -p "Press any key..."
 
 
-# ITypescript
-npm install -g  typescript                \
-npm install -g itypescript                \
+# Typescript
+npm install -g typescript 
+### ITypescript has a needed update that hasn't yet made it to npm,
+### so install from github
+npm install -g git+https://github.com/nearbydelta/itypescript.git
 its --install=local
 
 
@@ -35,16 +38,16 @@ jupyter nbextension enable equation-numbering/main
 
 
 # jupyter lab extensions
-jupyter labextension disable              \
+jupyter labextension disable                      \
   @jupyterlab/mathjax2-extension
 
-jupyter labextension install              \
-  @marcucius/mathjax3plus                 \
-  @deathbeds/jupyterlab-drawio            \
-  @deathbeds/jupyterlab-drawio-notebook   \
-  @deathbeds/jupyterlab-drawio-webpack    \
-  @wallneradam/custom_css                 \
-  @jupyterlab/latex                       \
+jupyter labextension install                      \
+  @marcucius/mathjax3plus                         \
+  @deathbeds/jupyterlab-drawio                    \
+  @deathbeds/jupyterlab-drawio-notebook           \
+  @deathbeds/jupyterlab-drawio-webpack            \
+  @wallneradam/custom_css                         \
+  @jupyterlab/latex                               \
   @jupyterlab/server-proxy  --minimize=False
 
 # --minimize=False seems to be the key              
