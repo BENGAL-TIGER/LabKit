@@ -11,6 +11,13 @@ python3 -m pip install zsh_jupyter_kernel
 python3 -m zsh_jupyter_kernel.install --sys-prefix
 
 
+# bash
+python3 -m pip install bash_kernel
+python3 -m bash_kernel.install --sys-prefix
+# pip install bash_kernel
+# python -m bash_kernel.install
+
+
 #  Javascript and IJavascript
 npm install -g ijavascript 
 ijsinstall --spec-path=full
@@ -18,8 +25,7 @@ ijsinstall --spec-path=full
 
 # Typescript and ITypescript
 npm install -g typescript 
-### ITypescript has a needed update that hasn't yet made it to npm,
-### so install from github
+### ITypescript has a needed update that hasn't yet made it to npm, so install from github master 
 npm install -g git+https://github.com/nearbydelta/itypescript.git
 its --install=local
 
