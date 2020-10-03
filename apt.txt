@@ -3,3 +3,4 @@ octave-image
 gnuplot
 ghostscript
 zsh
+tree
