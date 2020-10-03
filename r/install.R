@@ -1,13 +1,26 @@
 options(repos = "http://cran.us.r-project.org")
 
-install.packages("tidyverse")
-install.packages("bookdown")
-install.packages("bookdownplus")
-install.packages("rticles")
-install.packages("JuliaCall")
-install.packages("ggrepel")
-install.packages("ggthemes")
-install.packages("tufte")
+# install.packages("tidyverse")
+# install.packages("bookdown")
+# install.packages("bookdownplus")
+# install.packages("rticles")
+# install.packages("JuliaCall")
+# install.packages("ggrepel")
+# install.packages("ggthemes")
+# install.packages("tufte")
+
+install.packages(
+  c("tidyverse",
+    "bookdown",
+    "bookdownplus",
+    "rticles",
+    "JuliaCall",
+    "ggrepel",
+    "ggthemes",
+    "tufte",
+  )
+)
+
 
 tinytex::install_tinytex(
   extra_packages = c( 
