@@ -22,7 +22,7 @@ read -p "Press any key..."
 
 # Typescript
 npm install -g typescript 
-### ITypescript has a needed update that hasn't yet made it to npm,
+### ITypescript has a needed update that hasn't yet made it to npm, so install from github
 ### so install from github
 npm install -g git+https://github.com/nearbydelta/itypescript.git
 its --install=local
