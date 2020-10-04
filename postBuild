@@ -7,19 +7,19 @@
 R --quiet -f r/install.R
 
 
-# # zsh
-# python3 -m pip install zsh_jupyter_kernel
-# python3 -m zsh_jupyter_kernel.install --sys-prefix
+# zsh
+python3 -m pip install zsh_jupyter_kernel
+python3 -m zsh_jupyter_kernel.install --sys-prefix
 
 
-# # bash
-# python3 -m pip install bash_kernel
-# python3 -m bash_kernel.install --sys-prefix
+# bash
+python3 -m pip install bash_kernel
+python3 -m bash_kernel.install --sys-prefix
 
 
-# #  Javascript and IJavascript
-# npm install -g ijavascript 
-# ijsinstall --spec-path=full
+#  Javascript and IJavascript
+npm install -g ijavascript 
+ijsinstall --spec-path=full
 
 
 # Typescript and ITypescript
