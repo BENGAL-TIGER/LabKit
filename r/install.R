@@ -61,6 +61,7 @@ tinytex::install_tinytex(
     "float",
     "fontspec",
     "framed",
+    "fvextra",
     "geometry",
     "gettitlestring",
     "glyphlist",
