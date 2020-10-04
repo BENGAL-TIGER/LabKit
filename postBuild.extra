@@ -1,25 +1,24 @@
 #!/bin/bash
 
-
-#═══ Main ═════════════════════════════════════════════════════════════════════╤════╤════╕
+#═══ Extra ════════════════════════════════════════════════════════════════════╤════╤════╕
 
 # install more r packages. these will be compiled on the spot
 R --quiet -f r/install.R
 
 
-# # zsh
-# python3 -m pip install zsh_jupyter_kernel
-# python3 -m zsh_jupyter_kernel.install --sys-prefix
+# zsh
+python3 -m pip install zsh_jupyter_kernel
+python3 -m zsh_jupyter_kernel.install --sys-prefix
 
 
-# # bash
-# python3 -m pip install bash_kernel
-# python3 -m bash_kernel.install --sys-prefix
+# bash
+python3 -m pip install bash_kernel
+python3 -m bash_kernel.install --sys-prefix
 
 
-# #  Javascript and IJavascript
-# npm install -g ijavascript 
-# ijsinstall --spec-path=full
+#  Javascript and IJavascript
+npm install -g ijavascript 
+ijsinstall --spec-path=full
 
 
 # Typescript and ITypescript
@@ -34,6 +33,10 @@ jupyter nbextension enable livemdpreview/livemdpreview
 jupyter nbextension enable equation-numbering/main
 
 
+# jupyter lab extensions
+# jupyter labextension disable                      \
+#   @jupyterlab/mathjax2-extension
+
 jupyter labextension install                      \
   @deathbeds/jupyterlab-drawio                    \
   @deathbeds/jupyterlab-drawio-notebook           \
@@ -43,5 +46,10 @@ jupyter labextension install                      \
   @jupyterlab/server-proxy  --minimize=False
 
 # --minimize=False seems to be the key       
+
+  # @marcucius/mathjax2-extension           \
+    # @marcucius/mathjax3plus                         \
+
+
 
 
