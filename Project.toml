@@ -12,3 +12,6 @@ RCall = "6f49c342-dc21-5d91-9882-a32aef131414"
 RDatasets = "ce6b1742-4840-55fa-b093-852dadbb1d8b"
 Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
 Weave = "44d3d7a6-8a23-5bf8-98c5-b353f8df5ec9"
+
+[compat]
+julia = "1.5.1"
