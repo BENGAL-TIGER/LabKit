@@ -7,9 +7,9 @@
 R --quiet -f r/install.R
 
 
-# # zsh
-# python3 -m pip install zsh_jupyter_kernel
-# python3 -m zsh_jupyter_kernel.install --sys-prefix
+# zsh
+python3 -m pip install zsh_jupyter_kernel
+python3 -m zsh_jupyter_kernel.install --sys-prefix
 
 
 # # bash
