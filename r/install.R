@@ -98,6 +98,7 @@ tinytex::install_tinytex(
     "latexconfig",
     "latexmk",
     "letltxmacro",
+    "lineno",
     "listings",
     "lipsum",
     "lm",
