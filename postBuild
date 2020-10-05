@@ -38,6 +38,7 @@ jupyter labextension install                      \
   @deathbeds/jupyterlab-drawio                    \
   @deathbeds/jupyterlab-drawio-notebook           \
   @deathbeds/jupyterlab-drawio-webpack            \
+  @marcucius/jupyterlab-youcan-theme              \
   @wallneradam/custom_css                         \
   @jupyterlab/latex                               \
   @jupyterlab/server-proxy  --minimize=False
