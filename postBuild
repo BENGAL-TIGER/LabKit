@@ -34,12 +34,16 @@ jupyter nbextension enable livemdpreview/livemdpreview
 jupyter nbextension enable equation-numbering/main
 
 
+jupyter labextension disable @jupyterlab/mathjax2-extension
+
+
 jupyter labextension install                      \
   @deathbeds/jupyterlab-drawio                    \
   @deathbeds/jupyterlab-drawio-notebook           \
   @deathbeds/jupyterlab-drawio-webpack            \
   @wallneradam/custom_css                         \
   @jupyterlab/latex                               \
+  @jupyterlab/mathjax3-extension                  \
   @jupyterlab/server-proxy  --minimize=False
 
 # --minimize=False seems to be the key       
