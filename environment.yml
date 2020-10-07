@@ -1,6 +1,12 @@
+name: jupyterlab3-rc4
 channels:
+  - conda-forge/label/jupyterlab_rc
+  - conda-forge/label/jupyterlab_server_rc
   - conda-forge
 dependencies:
+  - jupyterlab=3.0.0rc4
+  - jupyterlab-python-file  # JupyterLab extension installed with conda (no end user build)
+  - xeus-python
   - nodejs
   - jupyter_contrib_nbextensions
   - nbgitpuller
@@ -8,3 +14,14 @@ dependencies:
   - r-essentials=4.*
   - codebraid
   - octave_kernel
+
+
+# name: jupyterlab-3
+# channels:
+# - conda-forge/label/jupyterlab_rc
+# - conda-forge/label/jupyterlab_server_rc
+# - conda-forge
+# dependencies:
+# - jupyterlab=3.0.0rc4
+# - jupyterlab-python-file  # JupyterLab extension installed with conda (no end user build)
+# - xeus-python
