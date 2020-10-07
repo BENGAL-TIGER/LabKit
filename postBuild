@@ -38,9 +38,7 @@ jupyter labextension disable @jupyterlab/mathjax2-extension
 
 
 jupyter labextension install                      \
-  @deathbeds/jupyterlab-drawio                    \
-  @deathbeds/jupyterlab-drawio-notebook           \
-  @deathbeds/jupyterlab-drawio-webpack            \
+
   @wallneradam/custom_css                         \
   @jupyterlab/latex                               \
   @marcucius/mathjax3-plus-numbering              \
@@ -48,4 +46,8 @@ jupyter labextension install                      \
 
 # --minimize=False seems to be the key       
 
+# # these don't work on jupyterlab 3
+#   @deathbeds/jupyterlab-drawio                    \
+#   @deathbeds/jupyterlab-drawio-notebook           \
+#   @deathbeds/jupyterlab-drawio-webpack            \
 
