@@ -43,7 +43,7 @@ jupyter labextension install                      \
   @deathbeds/jupyterlab-drawio-webpack            \
   @wallneradam/custom_css                         \
   @jupyterlab/latex                               \
-  @jupyterlab/mathjax3-extension                  \
+  @marcucius/mathjax3-plus-numbering              \
   @jupyterlab/server-proxy  --minimize=False
 
 # --minimize=False seems to be the key       
