@@ -34,6 +34,7 @@ jupyter nbextension enable livemdpreview/livemdpreview
 jupyter nbextension enable equation-numbering/main
 
 
+# use @marcucius/mathjax3-plus-numbering instead of stock mathjax2
 jupyter labextension disable @jupyterlab/mathjax2-extension
 
 
