@@ -17,7 +17,7 @@ install.packages(
     "JuliaCall",
     "ggrepel",
     "ggthemes",
-    "tufte",
+    "tufte"
   )
 )
 
