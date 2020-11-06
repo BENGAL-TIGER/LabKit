@@ -17,9 +17,17 @@ install.packages(
     "JuliaCall",
     "ggrepel",
     "ggthemes",
-    "tufte"
+    "tufte",
+    "blogdown",
+    "reticulate",
+    "blogdown",
+    "flexdashboard",
+    "learnr",
+    "revealjs",
+    "pkgdown"
   )
 )
+
 
 
 tinytex::install_tinytex(
