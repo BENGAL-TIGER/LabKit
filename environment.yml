@@ -4,7 +4,7 @@ dependencies:
   - nodejs
   - jupyter_contrib_nbextensions
   - nbgitpuller
-  - r-base=4.*
-  - r-essentials=4.*
+  - r-base=4
+  - r-essentials=4
   - codebraid
   - octave_kernel
