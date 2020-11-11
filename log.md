@@ -10,6 +10,10 @@ https://notebooks.gesis.org/binder/jupyter/user/bengal-tiger-labkit-lxpnf7yg/lab
 
 
 
+export workspace
+jupyter lab workspaces export > mcs-workspace.json
+
+
 Waiting for build to start...
 Picked Git content provider.
 Cloning into '/tmp/repo2dockerea_gx3s2'...
