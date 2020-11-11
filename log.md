@@ -1,3 +1,15 @@
+
+home
+https://notebooks.gesis.org/binder/jupyter/user/bengal-tiger-labkit-lxpnf7yg/lab
+
+rstudio
+https://notebooks.gesis.org/binder/jupyter/user/bengal-tiger-labkit-lxpnf7yg/lab
+
+
+https://notebooks.gesis.org/binder/jupyter/user/bengal-tiger-labkit-lxpnf7yg/lab
+
+
+
 Waiting for build to start...
 Picked Git content provider.
 Cloning into '/tmp/repo2dockerea_gx3s2'...

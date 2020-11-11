@@ -38,8 +38,9 @@ jupyter nbextension enable equation-numbering/main
 jupyter labextension disable @jupyterlab/mathjax2-extension
 
 
+# Import the workspace into JupyterLab
+jupyter lab workspaces import mcs-workspace.json
 
-jupyter lab workspaces import file_name.json
 
 
 jupyter labextension install                      \
@@ -53,5 +54,7 @@ jupyter labextension install                      \
   @jupyterlab/server-proxy  --minimize=False
 
 # --minimize=False seems to be the key       
+
+
 
 
