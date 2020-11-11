@@ -38,9 +38,13 @@ jupyter nbextension enable equation-numbering/main
 jupyter labextension disable @jupyterlab/mathjax2-extension
 
 
-# Import the workspace into JupyterLab
+# import the workspace into JupyterLab
 jupyter lab workspaces import mcs-workspace.json
 
+
+# Iset theme to youcan
+mkdir -p ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension
+cp themes.jupyterlab-settings ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension
 
 
 jupyter labextension install                      \
