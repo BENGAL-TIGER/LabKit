@@ -1,0 +1,8 @@
+{
+    // Theme
+    // @jupyterlab/apputils-extension:themes
+    // Theme manager settings.
+    // Theme manager settings.
+    // *************************************
+    "theme": "jupyter_theme_youcan"
+}
