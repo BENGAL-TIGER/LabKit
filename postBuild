@@ -71,10 +71,9 @@ jupyter labextension install --no-build              \
   # @jupyterlab/server-proxy  --minimize=False
 
 
-# RUN pip install git+https://github.com/betatim/vscode-binder && \
-#     jupyter serverextension enable --py jupyter_server_proxy && \
-#     jupyter labextension install --no-build @jupyterlab/server-proxy && \
-#     jupyter lab build && \
-#     npm cache clean --force && \
-#     rm -rf /home/${NB_USER}/.cache && \
-#     code-server --install-extension ms-python.python
+pip install git+https://github.com/betatim/vscode-binder && \
+jupyter serverextension enable --py jupyter_server_proxy && \
+jupyter labextension install --no-build @jupyterlab/server-proxy && \
+jupyter lab build && \
+npm cache clean --force && \#     rm -rf /home/${NB_USER}/.cache && \
+code-server --install-extension ms-python.python
