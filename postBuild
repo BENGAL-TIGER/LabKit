@@ -55,7 +55,7 @@ mkdir -p ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension
 cp themes.jupyterlab-settings ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension
 
 
-jupyter labextension install --nobuild              \
+jupyter labextension install --no-build              \
     @deathbeds/jupyterlab-drawio                    \
     @deathbeds/jupyterlab-drawio-notebook           \
     @deathbeds/jupyterlab-drawio-webpack            \
