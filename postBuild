@@ -42,7 +42,7 @@ jupyter nbextension enable livemdpreview/livemdpreview
 jupyter nbextension enable equation-numbering/main
 
 # Enable the proxy extension in notebook and lab
-# jupyter serverextension enable --py jupyter_server_proxy
+jupyter serverextension enable --py jupyter_server_proxy
 
 
 # use @marcucius/mathjax3-plus-numbering instead of stock mathjax2
