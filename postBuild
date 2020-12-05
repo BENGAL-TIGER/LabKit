@@ -41,9 +41,6 @@ its --install=local
 jupyter nbextension enable livemdpreview/livemdpreview              
 jupyter nbextension enable equation-numbering/main
 
-# Enable the proxy extension in notebook 
-jupyter serverextension enable --py jupyter_server_proxy
-
 
 # use @marcucius/mathjax3-plus-numbering instead of stock mathjax2
 jupyter labextension disable @jupyterlab/mathjax2-extension
@@ -58,29 +55,26 @@ mkdir -p ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension
 cp themes.jupyterlab-settings ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension
 
 
-jupyter labextension install                      \
-  @deathbeds/jupyterlab-drawio                    \
-  @deathbeds/jupyterlab-drawio-notebook           \
-  @deathbeds/jupyterlab-drawio-webpack            \
-  @wallneradam/custom_css                         \
-  @jupyterlab/latex                               \
-  @marcucius/mathjax3-plus-numbering              \
-  @marcucius/jupyter_theme_youcan                 \
-  @jupyterlab/server-proxy  --minimize=False
+jupyter labextension install --nobuild              \
+    @deathbeds/jupyterlab-drawio                    \
+    @deathbeds/jupyterlab-drawio-notebook           \
+    @deathbeds/jupyterlab-drawio-webpack            \
+    @wallneradam/custom_css                         \
+    @jupyterlab/latex                               \
+    @marcucius/mathjax3-plus-numbering              \
+    @marcucius/jupyter_theme_youcan                 \
+    @jupyterlab/server-proxy                        \
+ && jupyter lab build
 
 # --minimize=False seems to be the key       
 
-# Enable the proxy extension in notebook and lab
-# jupyter serverextension enable --py jupyter_server_proxy
-# jupyter labextension install @jupyterlab/server-proxy
-jupyter lab build
+  # @jupyterlab/server-proxy  --minimize=False
 
 
-code-server --install-extension ms-python.python
-# code-server --install-extension julialang.language-julia-insider
-
-
-# Install the VS code proxy
-pip install -e .
-
-
+# RUN pip install git+https://github.com/betatim/vscode-binder && \
+#     jupyter serverextension enable --py jupyter_server_proxy && \
+#     jupyter labextension install --no-build @jupyterlab/server-proxy && \
+#     jupyter lab build && \
+#     npm cache clean --force && \
+#     rm -rf /home/${NB_USER}/.cache && \
+#     code-server --install-extension ms-python.python
