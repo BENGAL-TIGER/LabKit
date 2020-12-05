@@ -7,6 +7,14 @@
 R --quiet -f r/install.R
 
 
+# install fresh CoolProp 6.3 for Julia
+julia -e '
+  import Pkg;
+  Pkg.add(url="https://github.com/BENGAL-TIGER/CoolProp-6.3.0.jl.git");
+  Pkg.precompile();
+'
+
+
 # zsh
 python3 -m pip install zsh_jupyter_kernel
 python3 -m zsh_jupyter_kernel.install --sys-prefix
