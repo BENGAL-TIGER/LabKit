@@ -4,7 +4,6 @@ dependencies:
   - nodejs
   - jupyter_contrib_nbextensions
   - jupyter-server-proxy
-  - code-server >=3.2
   - nbgitpuller
   - r-base=4
   - r-essentials=4
