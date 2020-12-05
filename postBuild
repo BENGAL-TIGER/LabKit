@@ -42,7 +42,7 @@ jupyter nbextension enable livemdpreview/livemdpreview
 jupyter nbextension enable equation-numbering/main
 
 # Enable the proxy extension in notebook and lab
-jupyter serverextension enable --py jupyter_server_proxy
+# jupyter serverextension enable --py jupyter_server_proxy
 
 
 # use @marcucius/mathjax3-plus-numbering instead of stock mathjax2
@@ -73,11 +73,13 @@ jupyter labextension install                      \
 # Enable the proxy extension in notebook and lab
 # jupyter serverextension enable --py jupyter_server_proxy
 # jupyter labextension install @jupyterlab/server-proxy
-jupyter lab build
+# jupyter lab build
 
 code-server --install-extension ms-python.python
+code-server --install-extension julialang.language-julia-insider
+
 
 # Install the VS code proxy
-pip install -e.
+# pip install -e.
 
 
