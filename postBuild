@@ -55,6 +55,10 @@ mkdir -p ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension
 cp themes.jupyterlab-settings ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension
 
 
+# Enable the proxy extension in notebook and lab
+jupyter serverextension enable --py jupyter_server_proxy
+
+
 jupyter labextension install --no-build              \
     @deathbeds/jupyterlab-drawio                    \
     @deathbeds/jupyterlab-drawio-notebook           \
@@ -73,11 +77,11 @@ jupyter labextension install --no-build              \
 
 
 # Enable the proxy extension in notebook and lab
-jupyter serverextension enable --py jupyter_server_proxy
-jupyter labextension install @jupyterlab/server-proxy
-jupyter lab build
+# jupyter serverextension enable --py jupyter_server_proxy
+# jupyter labextension install @jupyterlab/server-proxy
+# jupyter lab build
 
 code-server --install-extension ms-python.python
 
 # Install the VS code proxy
-pip install -e .
+pip install -e.
