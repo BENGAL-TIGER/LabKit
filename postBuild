@@ -64,16 +64,20 @@ jupyter labextension install --no-build              \
     @marcucius/mathjax3-plus-numbering              \
     @marcucius/jupyter_theme_youcan                 \
     @jupyterlab/server-proxy                        \
- && jupyter lab build
+ && jupyter lab build --minimize=False
 
 # --minimize=False seems to be the key       
 
   # @jupyterlab/server-proxy  --minimize=False
 
 
-pip install git+https://github.com/betatim/vscode-binder && \
-jupyter serverextension enable --py jupyter_server_proxy && \
-jupyter labextension install --no-build @jupyterlab/server-proxy && \
-jupyter lab build && \
-npm cache clean --force && \ #     rm -rf /home/${NB_USER}/.cache && \
+
+# Enable the proxy extension in notebook and lab
+jupyter serverextension enable --py jupyter_server_proxy
+jupyter labextension install @jupyterlab/server-proxy
+jupyter lab build
+
 code-server --install-extension ms-python.python
+
+# Install the VS code proxy
+pip install -e .
