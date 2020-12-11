@@ -11,3 +11,4 @@ dependencies:
   - r-essentials=4
   - codebraid
   - octave_kernel
+  - ruby
