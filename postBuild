@@ -37,6 +37,12 @@ npm install -g git+https://github.com/nearbydelta/itypescript.git
 its --install=local
 
 
+# ruby
+ln -s /usr/bin/libtoolize /usr/bin/libtool # See https://github.com/zeromq/libzmq/issues/1385
+gem update --no-document --system && gem install --no-document sciruby-full
+iruby register
+
+
 # jupyter notebook extensions
 jupyter nbextension enable livemdpreview/livemdpreview              
 jupyter nbextension enable equation-numbering/main
