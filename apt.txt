@@ -4,6 +4,5 @@ gnuplot
 ghostscript
 zsh
 tree
-build-essential 
-ruby-full
+
 
